@@ -119,6 +119,15 @@ body {
             text-transform: uppercase;
             display: none;
         }
-    }
+        &.active {
+            transition:all 0.07s;
+            -webkit-transition:all 0.07s;
+            -moz-transition:all 0.07s;
+            -ms-transition:all 0.07s;
+            -o-transition:all 0.07s;
+            border: 2px solid #F96A23;
+            transform:scale(1.5);
+        }
+    } 
     }
 }
