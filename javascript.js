@@ -9,8 +9,14 @@ audio.play();
 key.classList.add("active");
 
 });
-function init(){
-    const keys = document.querySelectorAll('.key');
+function removeTransition(e){
+  if (e.propertyName !=="transform") return;
+  this.classList.remove("active");
+  console.log(e.propertyName);
     
+}
+const init = () => {
+        const keys = document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transitionend',removeTransition));
 }
 window.addEventListener('load',init);
